@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCRIPTS_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )/scripts" && pwd )"
+
+$SCRIPTS_DIRECTORY/homebrew
+$SCRIPTS_DIRECTORY/bash_it
+$SCRIPTS_DIRECTORY/bash_profile
+$SCRIPTS_DIRECTORY/brew_bundle
+$SCRIPTS_DIRECTORY/ruby
+$SCRIPTS_DIRECTORY/vim
