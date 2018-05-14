@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ROOT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+
+${ROOT_DIRECTORY}/Operation//Operation/main.swift $@
