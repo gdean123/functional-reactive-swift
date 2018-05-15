@@ -7,12 +7,9 @@ class CounterViewController: UIViewController {
     let didTapShowCountStream: PublishSubject<Void>
     let disposeBag: DisposeBag
     
-    @IBOutlet weak var incrementButton: UIButton!
-    @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var showCountButton: UIButton!
-    
-    public init(counter: Counter,
-        didTapShowCountStream: PublishSubject<Void>) {
+
+    public init(counter: Counter, didTapShowCountStream: PublishSubject<Void>) {
         self.disposeBag = DisposeBag()
         self.counter = counter
         self.didTapShowCountStream = didTapShowCountStream
@@ -23,18 +20,18 @@ class CounterViewController: UIViewController {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    @IBAction func didTapDecrement(_ sender: Any) {
+        counter.decrement()
+    }
+
+    @IBAction func didTapIncrement(_ sender: Any) {
+        counter.increment()
+    }
+
     override func viewDidLoad() {
-        incrementButton.rx.tap
-            .bind(to: counter.didTapIncrementStream)
-            .disposed(by: disposeBag)
-        
-        decrementButton.rx.tap
-            .bind(to: counter.didTapDecrementStream)
-            .disposed(by: disposeBag)
-        
         showCountButton.rx.tap
             .bind(to: didTapShowCountStream)
-            .disposed(by: disposeBag)       
+            .disposed(by: disposeBag)
     }
 }

@@ -1,7 +1,6 @@
 import UIKit
 import RxSwift
 
-
 class Application {
     var window: UIWindow?
     let navigator: Navigator

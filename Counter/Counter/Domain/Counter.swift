@@ -3,25 +3,36 @@ import RxSwift
 import RxCocoa
 
 class Counter {
-    let didTapIncrementStream: PublishSubject<Void>
-    let didTapDecrementStream: PublishSubject<Void>
     let countRelay: BehaviorRelay<String>
+
+    private let didIncrementStream: PublishSubject<Void>
+    private let didDecrementStream: PublishSubject<Void>
     private let disposeBag: DisposeBag
 
     init() {
-        self.didTapIncrementStream = PublishSubject<Void>()
-        self.didTapDecrementStream = PublishSubject<Void>()
+        self.didIncrementStream = PublishSubject<Void>()
+        self.didDecrementStream = PublishSubject<Void>()
         self.countRelay = BehaviorRelay<String>(value: "")
         self.disposeBag = DisposeBag()
 
-        let countStream = Observable.merge(self.didTapIncrementStream.map { 1 }, self.didTapDecrementStream.map { -1 })
+        count()
+            .bind(to: countRelay)
+            .disposed(by: disposeBag)
+    }
+
+    func increment() {
+        didIncrementStream.onNext(Void())
+    }
+
+    func decrement() {
+        didDecrementStream.onNext(Void())
+    }
+
+    private func count() -> Observable<String> {
+        return Observable.merge(self.didIncrementStream.map { 1 }, self.didDecrementStream.map { -1 })
             .scan(0) {(accumulator, currentValue) in accumulator + currentValue }
             .map({ (count) in
                 return String(count)
             })
-
-        countStream
-            .bind(to: countRelay)
-            .disposed(by: disposeBag)
     }
 }
