@@ -1,0 +1,15 @@
+platform :ios, '11.3'
+
+target 'Counter' do
+  use_frameworks!
+
+  pod 'RxSwift'
+
+  target 'CounterTests' do
+    inherit! :search_paths
+  end
+
+  target 'CounterUITests' do
+    inherit! :search_paths
+  end
+end
