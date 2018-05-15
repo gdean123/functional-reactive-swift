@@ -15,6 +15,8 @@
 		AE2D7DDD20AA40F500760134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2D7DDB20AA40F500760134 /* LaunchScreen.storyboard */; };
 		AE2D7DE820AA40F500760134 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D7DE720AA40F500760134 /* CounterTests.swift */; };
 		AE2D7DF320AA40F500760134 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D7DF220AA40F500760134 /* CounterUITests.swift */; };
+		AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD727820AB43FF005CD4E0 /* Application.swift */; };
+		AEAD727A20AB43FF005CD4E0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD727820AB43FF005CD4E0 /* Application.swift */; };
 		DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
 		DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
 		DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CB21816E906A6F3516E3 /* CounterViewController.swift */; };
@@ -61,6 +63,7 @@
 		AE2D7DEE20AA40F500760134 /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2D7DF220AA40F500760134 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		AE2D7DF420AA40F500760134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEAD727820AB43FF005CD4E0 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		D41B5367B5A600BB2BB7861B /* Pods-CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE99C3068B0D4A54CDE63628 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		DE99C33E9C44E2F5E7D8516C /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		AE2D7DD120AA40F300760134 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				AEAD727820AB43FF005CD4E0 /* Application.swift */,
 				AE2D7DD220AA40F300760134 /* AppDelegate.swift */,
 				AE2D7DD920AA40F500760134 /* Assets.xcassets */,
 				AE2D7DDB20AA40F500760134 /* LaunchScreen.storyboard */,
@@ -400,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DD320AA40F300760134 /* AppDelegate.swift in Sources */,
 				DE99CF154C21DA45C7D7874D /* CountViewController.swift in Sources */,
 				DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */,
@@ -411,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAD727A20AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DE820AA40F500760134 /* CounterTests.swift in Sources */,
 				DE99CCA759EC6F2949A78526 /* CountViewController.swift in Sources */,
 				DE99C88186AB1CE95665545F /* CounterViewController.swift in Sources */,
