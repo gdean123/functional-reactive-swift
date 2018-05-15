@@ -4,6 +4,7 @@ target 'Counter' do
   use_frameworks!
 
   pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'CounterTests' do
     inherit! :search_paths

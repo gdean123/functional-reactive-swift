@@ -17,6 +17,10 @@
 		AE2D7DF320AA40F500760134 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D7DF220AA40F500760134 /* CounterUITests.swift */; };
 		AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD727820AB43FF005CD4E0 /* Application.swift */; };
 		AEAD727A20AB43FF005CD4E0 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD727820AB43FF005CD4E0 /* Application.swift */; };
+		AEAD727D20AB4FCB005CD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD727B20AB4FCB005CD4E0 /* ViewController.swift */; };
+		AEAD727E20AB4FCB005CD4E0 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAD727C20AB4FCB005CD4E0 /* ViewController.xib */; };
+		AEAD728420AB6493005CD4E0 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD728320AB6493005CD4E0 /* Counter.swift */; };
+		AEAD728520AB6493005CD4E0 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD728320AB6493005CD4E0 /* Counter.swift */; };
 		DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
 		DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
 		DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CB21816E906A6F3516E3 /* CounterViewController.swift */; };
@@ -64,6 +68,9 @@
 		AE2D7DF220AA40F500760134 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		AE2D7DF420AA40F500760134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEAD727820AB43FF005CD4E0 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		AEAD727B20AB4FCB005CD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEAD727C20AB4FCB005CD4E0 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		AEAD728320AB6493005CD4E0 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		D41B5367B5A600BB2BB7861B /* Pods-CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE99C3068B0D4A54CDE63628 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		DE99C33E9C44E2F5E7D8516C /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
@@ -128,6 +135,7 @@
 		AE2D7DD120AA40F300760134 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				AEAD728020AB52BF005CD4E0 /* Domain */,
 				AEAD727820AB43FF005CD4E0 /* Application.swift */,
 				AE2D7DD220AA40F300760134 /* AppDelegate.swift */,
 				AE2D7DD920AA40F500760134 /* Assets.xcassets */,
@@ -156,6 +164,14 @@
 			path = CounterUITests;
 			sourceTree = "<group>";
 		};
+		AEAD728020AB52BF005CD4E0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AEAD728320AB6493005CD4E0 /* Counter.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		B4EA7813FBB4AE3A8C215A1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +190,8 @@
 				DE99CC380F20FF2B82A40B2D /* CountViewController.swift */,
 				DE99CB21816E906A6F3516E3 /* CounterViewController.swift */,
 				DE99C84911D384130DAE142A /* Navigator.swift */,
+				AEAD727B20AB4FCB005CD4E0 /* ViewController.swift */,
+				AEAD727C20AB4FCB005CD4E0 /* ViewController.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -299,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAD727E20AB4FCB005CD4E0 /* ViewController.xib in Resources */,
 				AE2D7DDD20AA40F500760134 /* LaunchScreen.storyboard in Resources */,
 				AE2D7DDA20AA40F500760134 /* Assets.xcassets in Resources */,
 				DE99CFA98D75C5C212E647CE /* CounterView.xib in Resources */,
@@ -368,10 +387,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Counter/Pods-Counter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAD728420AB6493005CD4E0 /* Counter.swift in Sources */,
+				AEAD727D20AB4FCB005CD4E0 /* ViewController.swift in Sources */,
 				AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DD320AA40F300760134 /* AppDelegate.swift in Sources */,
 				DE99CF154C21DA45C7D7874D /* CountViewController.swift in Sources */,
@@ -418,6 +441,7 @@
 			files = (
 				AEAD727A20AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DE820AA40F500760134 /* CounterTests.swift in Sources */,
+				AEAD728520AB6493005CD4E0 /* Counter.swift in Sources */,
 				DE99CCA759EC6F2949A78526 /* CountViewController.swift in Sources */,
 				DE99C88186AB1CE95665545F /* CounterViewController.swift in Sources */,
 				DE99CF4D23DAF3BF2935A126 /* Navigator.swift in Sources */,

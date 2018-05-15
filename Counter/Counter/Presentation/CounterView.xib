@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CounterViewController" customModule="Counter" customModuleProvider="target">
             <connections>
+                <outlet property="decrementButton" destination="fWO-4t-cXk" id="VVb-0U-c8Z"/>
+                <outlet property="incrementButton" destination="lLx-sW-oFk" id="KQk-rL-hJI"/>
+                <outlet property="showCountButton" destination="fxf-Ux-TaS" id="mDK-FS-9wK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,9 +34,16 @@
                     <rect key="frame" x="275" y="617" width="84" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Show Count"/>
-                    <connections>
-                        <action selector="showCount:" destination="-1" eventType="touchUpInside" id="9nH-0G-e2B"/>
-                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWO-4t-cXk">
+                    <rect key="frame" x="58" y="112" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="-"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLx-sW-oFk">
+                    <rect key="frame" x="86" y="112" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="+"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
