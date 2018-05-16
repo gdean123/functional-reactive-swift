@@ -1,29 +1,45 @@
 PODS:
   - Nimble (7.1.1)
   - Quick (1.3.0)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
   - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
 
 DEPENDENCIES:
   - Nimble
   - Quick
+  - RealmSwift
   - RxCocoa
+  - RxRealm
   - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
     - Quick
+    - Realm
+    - RealmSwift
     - RxCocoa
+    - RxRealm
     - RxSwift
 
 SPEC CHECKSUMS:
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 5e1bbf8d7a774a0a75d5a3f19838109208202650
+PODFILE CHECKSUM: 1effeb32664513b67b2af6eda5b866d221f10292
 
 COCOAPODS: 1.5.2

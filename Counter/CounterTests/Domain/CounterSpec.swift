@@ -8,20 +8,22 @@ import RxCocoa
 class CounterSpec: QuickSpec {
     override func spec() {
         var counter: Counter!
+        var disposeBag: DisposeBag!
 
         beforeEach {
-            counter = Counter()
+            disposeBag = DisposeBag()
+            counter = Counter(disposeBag: disposeBag)
         }
 
-        it("starts with the empty string") {
-            expect(counter.countRelay.value).to(equal(""))
+        it("starts with 0") {
+            expect(counter.countRelay.value).to(equal(0))
         }
 
         describe("#increment") {
             it("increments the count") {
                 counter.increment()
                 counter.increment()
-                expect(counter.countRelay.value).to(equal("2"))
+                expect(counter.countRelay.value).to(equal(2))
             }
         }
 
@@ -30,7 +32,7 @@ class CounterSpec: QuickSpec {
                 counter.decrement()
                 counter.decrement()
                 counter.decrement()
-                expect(counter.countRelay.value).to(equal("-3"))
+                expect(counter.countRelay.value).to(equal(-3))
             }
         }
     }

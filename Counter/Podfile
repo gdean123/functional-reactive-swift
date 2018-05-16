@@ -5,6 +5,8 @@ target 'Counter' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxRealm'
+  pod 'RealmSwift'
 
   target 'CounterTests' do
     inherit! :search_paths

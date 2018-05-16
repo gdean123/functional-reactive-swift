@@ -8,23 +8,20 @@ import RxCocoa
 class CountViewControllerSpec: QuickSpec {
     override func spec() {
         var countViewController: CountViewController!
-        var counter: Counter!
+        var count: PublishSubject<Int>!
+        var disposeBag: DisposeBag!
 
         beforeEach {
-            counter = Counter()
-            countViewController = CountViewController(counter: counter)
+            disposeBag = DisposeBag()
+            count = PublishSubject()
+            countViewController = CountViewController(count: count, disposeBag: disposeBag)
             let _ = countViewController.view
-        }
-
-        it("does not render the count initially") {
-            expect(countViewController.countLabel.text).to(equal(""))
         }
 
         describe("when a count is emitted") {
             it("renders the count") {
-                counter.increment()
-                counter.increment()
-                expect(countViewController.countLabel.text).to(equal("2"))
+                count.onNext(123)
+                expect(countViewController.countLabel.text).to(equal("123"))
             }
         }
     }

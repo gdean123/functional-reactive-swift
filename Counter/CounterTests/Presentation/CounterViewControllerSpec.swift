@@ -10,11 +10,13 @@ class CounterViewControllerSpec: QuickSpec {
         var counterViewController: CounterViewController!
         var counter: Counter!
         var didTapCountStream: PublishSubject<Void>!
+        var disposeBag: DisposeBag!
 
         beforeEach {
-            counter = Counter()
+            disposeBag = DisposeBag()
+            counter = Counter(disposeBag: disposeBag)
             didTapCountStream = PublishSubject()
-            counterViewController = CounterViewController(counter: counter, didTapShowCountStream: didTapCountStream)
+            counterViewController = CounterViewController(counter: counter, didTapShowCountStream: didTapCountStream, disposeBag: disposeBag)
 
             let _ = counterViewController.view
         }
@@ -23,7 +25,7 @@ class CounterViewControllerSpec: QuickSpec {
             it("increments the count") {
                 counterViewController.incrementButton.sendActions(for: .touchUpInside)
                 counterViewController.incrementButton.sendActions(for: .touchUpInside)
-                expect(counter.countRelay.value).to(equal("2"))
+                expect(counter.countRelay.value).to(equal(2))
             }
         }
     }

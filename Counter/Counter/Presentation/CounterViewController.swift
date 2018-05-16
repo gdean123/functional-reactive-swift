@@ -11,10 +11,10 @@ class CounterViewController: UIViewController {
     @IBOutlet weak var incrementButton: UIButton!
     @IBOutlet weak var decrementButton: UIButton!
 
-    public init(counter: Counter, didTapShowCountStream: PublishSubject<Void>) {
-        self.disposeBag = DisposeBag()
+    public init(counter: Counter, didTapShowCountStream: PublishSubject<Void>, disposeBag: DisposeBag) {
         self.counter = counter
         self.didTapShowCountStream = didTapShowCountStream
+        self.disposeBag = disposeBag
         
         super.init(nibName: "CounterView", bundle: Bundle.init(identifier: "com.frs.Counter"))
     }
