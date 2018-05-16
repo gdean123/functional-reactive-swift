@@ -8,11 +8,14 @@ import RxCocoa
 class CounterSpec: QuickSpec {
     override func spec() {
         var counter: Counter!
+        var persistedCount: PublishSubject<Int>!
         var disposeBag: DisposeBag!
 
         beforeEach {
+            persistedCount = PublishSubject()
             disposeBag = DisposeBag()
-            counter = Counter(disposeBag: disposeBag)
+
+            counter = Counter(persistedCountStream: persistedCount, disposeBag: disposeBag)
         }
 
         it("starts with 0") {
@@ -34,6 +37,34 @@ class CounterSpec: QuickSpec {
                 counter.decrement()
                 expect(counter.countRelay.value).to(equal(-3))
             }
+        }
+
+        context("when a persisted count is emitted") {
+            it("resets the counter to that value") {
+                counter.increment()
+                expect(counter.countRelay.value).to(equal(1))
+
+                persistedCount.onNext(10)
+                expect(counter.countRelay.value).to(equal(10))
+
+                counter.increment()
+                expect(counter.countRelay.value).to(equal(11))
+            }
+        }
+
+        it("only emits when the value has changed") {
+            var numberOfEvents = 0
+            counter.countRelay
+                .bind(onNext: { count in
+                    numberOfEvents += 1
+                })
+                .disposed(by: disposeBag)
+
+            expect(numberOfEvents).to(equal(1))
+            persistedCount.onNext(10)
+            persistedCount.onNext(10)
+            persistedCount.onNext(10)
+            expect(numberOfEvents).to(equal(2))
         }
     }
 }

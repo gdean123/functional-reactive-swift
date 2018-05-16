@@ -14,7 +14,7 @@ class Application {
         let countRepository = CountRepository(realm: realm, disposeBag: disposeBag)
 
         let didTapShowCountStream = PublishSubject<Void>()
-        let counter = Counter(disposeBag: disposeBag)
+        let counter = Counter(persistedCountStream: countRepository.get(), disposeBag: disposeBag)
 
         countRepository.update(count: counter.countRelay.asObservable())
 
