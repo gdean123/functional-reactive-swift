@@ -13,6 +13,10 @@ class CounterSpec: QuickSpec {
             counter = Counter()
         }
 
+        it("starts with the empty string") {
+            expect(counter.countRelay.value).to(equal(""))
+        }
+
         describe("#increment") {
             it("increments the count") {
                 counter.increment()

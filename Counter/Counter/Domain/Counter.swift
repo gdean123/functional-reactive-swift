@@ -31,8 +31,6 @@ class Counter {
     private func count() -> Observable<String> {
         return Observable.merge(self.didIncrementStream.map { 1 }, self.didDecrementStream.map { -1 })
             .scan(0) {(accumulator, currentValue) in accumulator + currentValue }
-            .map({ (count) in
-                return String(count)
-            })
+            .map({ (count) in String(count) })
     }
 }

@@ -19,6 +19,7 @@
 		AEAD728420AB6493005CD4E0 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD728320AB6493005CD4E0 /* Counter.swift */; };
 		AEF497C920ABB1E9002316C1 /* CounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497C820ABB1E9002316C1 /* CounterSpec.swift */; };
 		AEF497CC20ABB27A002316C1 /* CounterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497CB20ABB27A002316C1 /* CounterViewControllerSpec.swift */; };
+		AEF497CE20ABB4B8002316C1 /* CountViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497CD20ABB4B8002316C1 /* CountViewControllerSpec.swift */; };
 		DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
 		DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
 		DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CB21816E906A6F3516E3 /* CounterViewController.swift */; };
@@ -66,6 +67,7 @@
 		AEAD728320AB6493005CD4E0 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		AEF497C820ABB1E9002316C1 /* CounterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSpec.swift; sourceTree = "<group>"; };
 		AEF497CB20ABB27A002316C1 /* CounterViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewControllerSpec.swift; sourceTree = "<group>"; };
+		AEF497CD20ABB4B8002316C1 /* CountViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewControllerSpec.swift; sourceTree = "<group>"; };
 		D41B5367B5A600BB2BB7861B /* Pods-CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE99C3068B0D4A54CDE63628 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		DE99C33E9C44E2F5E7D8516C /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				AEF497CB20ABB27A002316C1 /* CounterViewControllerSpec.swift */,
+				AEF497CD20ABB4B8002316C1 /* CountViewControllerSpec.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				AEF497CC20ABB27A002316C1 /* CounterViewControllerSpec.swift in Sources */,
 				AE2D7DE820AA40F500760134 /* CounterTests.swift in Sources */,
 				AEF497C920ABB1E9002316C1 /* CounterSpec.swift in Sources */,
+				AEF497CE20ABB4B8002316C1 /* CountViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
