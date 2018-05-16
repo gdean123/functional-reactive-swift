@@ -8,6 +8,8 @@ target 'Counter' do
 
   target 'CounterTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'CounterUITests' do

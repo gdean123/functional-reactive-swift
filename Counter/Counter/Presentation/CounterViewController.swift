@@ -8,6 +8,8 @@ class CounterViewController: UIViewController {
     let disposeBag: DisposeBag
     
     @IBOutlet weak var showCountButton: UIButton!
+    @IBOutlet weak var incrementButton: UIButton!
+    @IBOutlet weak var decrementButton: UIButton!
 
     public init(counter: Counter, didTapShowCountStream: PublishSubject<Void>) {
         self.disposeBag = DisposeBag()
