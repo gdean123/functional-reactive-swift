@@ -9,12 +9,10 @@ class CountViewControllerSpec: QuickSpec {
     override func spec() {
         var countViewController: CountViewController!
         var count: PublishSubject<Int>!
-        var disposeBag: DisposeBag!
 
         beforeEach {
-            disposeBag = DisposeBag()
             count = PublishSubject()
-            countViewController = CountViewController(count: count, disposeBag: disposeBag)
+            countViewController = CountViewController(count: count)
             let _ = countViewController.view
         }
 

@@ -5,19 +5,16 @@ import RealmSwift
 class PersistCountSink {
     let realm: Realm
     let count: Observable<Int>
-    let disposeBag: DisposeBag
+    let disposeBag = DisposeBag()
 
-    init(realm: Realm, count: Observable<Int>, disposeBag: DisposeBag) {
+    init(realm: Realm, count: Observable<Int>) {
         self.realm = realm
         self.count = count
-        self.disposeBag = disposeBag
     }
 
     func listen() {
         count
-            .subscribe(onNext: { count in
-                self.update(count: count)
-            })
+            .subscribe(onNext: { count in self.update(count: count) })
             .disposed(by: disposeBag)
     }
 

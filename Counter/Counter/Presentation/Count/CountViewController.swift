@@ -4,13 +4,12 @@ import RxCocoa
 
 class CountViewController: UIViewController {
     let count: Observable<Int>
-    let disposeBag: DisposeBag
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var countLabel: UILabel!
     
-    public init(count: Observable<Int>, disposeBag: DisposeBag) {
+    public init(count: Observable<Int>) {
         self.count = count
-        self.disposeBag = disposeBag
         super.init(nibName: "CountView", bundle: Bundle.init(identifier: "com.frs.Counter"))
     }
 

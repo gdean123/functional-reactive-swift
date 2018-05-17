@@ -5,20 +5,21 @@ class NavigationSink {
     let navigationController: UINavigationController
     let countViewController: CountViewController
     let didTapShowCountStream: Observable<Void>
-    let disposeBag: DisposeBag
+    let disposeBag = DisposeBag()
 
-    init(navigationController: UINavigationController, countViewController: CountViewController, didTapShowCountStream: Observable<Void>, disposeBag: DisposeBag) {
+    init(navigationController: UINavigationController, countViewController: CountViewController, didTapShowCountStream: Observable<Void>) {
         self.navigationController = navigationController
         self.countViewController = countViewController
         self.didTapShowCountStream = didTapShowCountStream
-        self.disposeBag = disposeBag
     }
 
     func listen() {
         self.didTapShowCountStream
-            .subscribe({ _ in
-                self.navigationController.pushViewController(self.countViewController, animated: true)
-            })
+            .subscribe({ _ in self.navigate(to: self.countViewController) })
             .disposed(by: disposeBag)
+    }
+
+    private func navigate(to: UIViewController) {
+        self.navigationController.pushViewController(to, animated: true)
     }
 }

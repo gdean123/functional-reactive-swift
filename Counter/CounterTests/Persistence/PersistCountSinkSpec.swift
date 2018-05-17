@@ -11,14 +11,12 @@ class PersistCountSinkSpec: QuickSpec {
 
         var realm: Realm!
         var count: PublishSubject<Int>!
-        var disposeBag: DisposeBag!
 
         beforeEach {
-            disposeBag = DisposeBag()
             realm = try! Realm(configuration: Realm.Configuration(inMemoryIdentifier: UUID().uuidString))
             count = PublishSubject()
 
-            persistCountSink = PersistCountSink(realm: realm, count: count, disposeBag: disposeBag)
+            persistCountSink = PersistCountSink(realm: realm, count: count)
         }
 
         describe("#listen") {

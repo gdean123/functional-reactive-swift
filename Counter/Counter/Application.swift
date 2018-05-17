@@ -5,13 +5,10 @@ import RealmSwift
 class Application {
     var window: UIWindow?
     let navigationController: UINavigationController
-    let disposeBag: DisposeBag
     let persistCountSink: PersistCountSink
     let navigationSink: NavigationSink
 
     init() {
-        disposeBag = DisposeBag()
-
         let realm = try! Realm()
         let countSource = PersistedCountSource(realm: realm)
 
@@ -20,25 +17,20 @@ class Application {
 
         let counterViewController = CounterViewController(
             counter: counter,
-            didTapShowCountStream: didTapShowCountStream,
-            disposeBag: disposeBag
+            didTapShowCountStream: didTapShowCountStream
         )
 
-        let countViewController = CountViewController(
-            count: countSource.all(),
-            disposeBag: disposeBag
-        )
+        let countViewController = CountViewController(count: countSource.all())
 
         navigationController = UINavigationController(rootViewController: counterViewController)
 
         navigationSink = NavigationSink(
             navigationController: navigationController,
             countViewController: countViewController,
-            didTapShowCountStream: didTapShowCountStream,
-            disposeBag: disposeBag
+            didTapShowCountStream: didTapShowCountStream
         )
 
-        persistCountSink = PersistCountSink(realm: realm, count: counter.countStream(), disposeBag: disposeBag)
+        persistCountSink = PersistCountSink(realm: realm, count: counter.countStream())
     }
 
     func run() {
