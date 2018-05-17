@@ -23,11 +23,6 @@ class CountRepository {
         self.realm = realm
     }
 
-    func get() -> Int {
-        let count = realm.objects(Count.self).first!
-        return count.currentCount
-    }
-
     func get() -> Observable<Int> {
         return Observable.from(object: realm.objects(Count.self).first!)
             .map({ count in
