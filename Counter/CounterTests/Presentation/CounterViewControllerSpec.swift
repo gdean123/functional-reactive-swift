@@ -14,7 +14,7 @@ class CounterViewControllerSpec: QuickSpec {
 
         beforeEach {
             disposeBag = DisposeBag()
-            counter = Counter(persistedCountStream: Observable.never(), disposeBag: disposeBag)
+            counter = Counter(initialCount: 0, disposeBag: disposeBag)
             didTapCountStream = PublishSubject()
             counterViewController = CounterViewController(counter: counter, didTapShowCountStream: didTapCountStream, disposeBag: disposeBag)
 

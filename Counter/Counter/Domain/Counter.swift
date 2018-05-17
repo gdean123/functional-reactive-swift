@@ -5,19 +5,17 @@ import RxCocoa
 class Counter {
     let countRelay: BehaviorRelay<Int>
 
-    private let persistedCountStream: Observable<Int>
     private let didIncrementStream: PublishSubject<Void>
     private let didDecrementStream: PublishSubject<Void>
     private let disposeBag: DisposeBag
 
-    init(persistedCountStream: Observable<Int>, disposeBag: DisposeBag) {
+    init(initialCount: Int, disposeBag: DisposeBag) {
         self.didIncrementStream = PublishSubject()
         self.didDecrementStream = PublishSubject()
-        self.persistedCountStream = persistedCountStream
-        self.countRelay = BehaviorRelay(value: 0)
+        self.countRelay = BehaviorRelay(value: initialCount)
         self.disposeBag = disposeBag
 
-        count()
+        count(initialCount: initialCount)
             .bind(to: countRelay)
             .disposed(by: disposeBag)
     }
@@ -30,35 +28,17 @@ class Counter {
         didDecrementStream.onNext(Void())
     }
 
-    private enum CountEvent {
-        case delta(amount: Int)
-        case replace(value: Int)
-    }
-
-    private func count() -> Observable<Int> {
+    private func count(initialCount: Int) -> Observable<Int> {
         return countEvents()
-            .scan(0) { accumulator, countEvent in
-                switch countEvent {
-                case .delta(let amount):
-                    return accumulator + amount
-                case .replace(let value):
-                    return value
-                }
+            .scan(initialCount) { accumulator, currentValue in
+                return accumulator + currentValue
             }
-            .distinctUntilChanged()
     }
 
-    private func countEvents() -> Observable<CountEvent> {
+    private func countEvents() -> Observable<Int> {
         return Observable.merge(
-            didIncrementStream.map {
-                CountEvent.delta(amount: 1)
-            },
-            didDecrementStream.map {
-                CountEvent.delta(amount: -1)
-            },
-            persistedCountStream.map { persistedCount in
-                CountEvent.replace(value: persistedCount)
-            }
+            didIncrementStream.map { 1 },
+            didDecrementStream.map { -1 }
         )
     }
 }

@@ -6,17 +6,16 @@ class Application {
     var window: UIWindow?
     let navigationController: UINavigationController
     let disposeBag: DisposeBag
+    let persistCountSink: PersistCountSink
 
     init() {
         disposeBag = DisposeBag()
 
         let realm = try! Realm()
-        let countRepository = CountRepository(realm: realm, disposeBag: disposeBag)
+        let countRepository = CountRepository(realm: realm)
 
         let didTapShowCountStream = PublishSubject<Void>()
-        let counter = Counter(persistedCountStream: countRepository.get(), disposeBag: disposeBag)
-
-        countRepository.update(count: counter.countRelay.asObservable())
+        let counter = Counter(initialCount: countRepository.get(), disposeBag: disposeBag)
 
         let counterViewController = CounterViewController(
             counter: counter,
@@ -37,9 +36,13 @@ class Application {
             didTapShowCountStream: didTapShowCountStream,
             disposeBag: disposeBag
         )
+
+        persistCountSink = PersistCountSink(countRepository: countRepository, count: counter.countRelay.asObservable(), disposeBag: disposeBag)
     }
 
     func run() {
+        persistCountSink.listen()
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = navigationController
         window!.makeKeyAndVisible()

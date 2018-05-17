@@ -18,11 +18,14 @@ class Count: Object {
 
 class CountRepository {
     let realm: Realm
-    let disposeBag: DisposeBag
-
-    init(realm: Realm, disposeBag: DisposeBag) {
+    
+    init(realm: Realm) {
         self.realm = realm
-        self.disposeBag = disposeBag
+    }
+
+    func get() -> Int {
+        let count = realm.objects(Count.self).first!
+        return count.currentCount
     }
 
     func get() -> Observable<Int> {
@@ -32,10 +35,9 @@ class CountRepository {
             })
     }
 
-    func update(count: Observable<Int>) {
-        count
-            .map { currentCount in Count.create(currentCount: currentCount) }
-            .subscribe(realm.rx.add(update: true, onError: { count, error in print("Error saving count") }))
-            .disposed(by: disposeBag)
+    func update(count: Int) {
+        try! realm.write {
+            realm.add(Count.create(currentCount: count), update: true)
+        }
     }
 }

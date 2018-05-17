@@ -22,6 +22,7 @@
 		AEF497D020ABB735002316C1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497CF20ABB735002316C1 /* main.swift */; };
 		AEF497D420ABB7B2002316C1 /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497D320ABB7B2002316C1 /* TestingAppDelegate.swift */; };
 		AEF497D720ACA7F5002316C1 /* CountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497D620ACA7F5002316C1 /* CountRepository.swift */; };
+		AEF497D920AD091A002316C1 /* PersistCountSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497D820AD091A002316C1 /* PersistCountSink.swift */; };
 		DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
 		DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
 		DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CB21816E906A6F3516E3 /* CounterViewController.swift */; };
@@ -72,6 +73,7 @@
 		AEF497CF20ABB735002316C1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AEF497D320ABB7B2002316C1 /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		AEF497D620ACA7F5002316C1 /* CountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountRepository.swift; sourceTree = "<group>"; };
+		AEF497D820AD091A002316C1 /* PersistCountSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistCountSink.swift; sourceTree = "<group>"; };
 		D41B5367B5A600BB2BB7861B /* Pods-CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE99C3068B0D4A54CDE63628 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		DE99C33E9C44E2F5E7D8516C /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAD728320AB6493005CD4E0 /* Counter.swift */,
+				AEF497D820AD091A002316C1 /* PersistCountSink.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				DE99CF154C21DA45C7D7874D /* CountViewController.swift in Sources */,
 				DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */,
 				DE99C586DEF24F7FCE60AB51 /* Navigator.swift in Sources */,
+				AEF497D920AD091A002316C1 /* PersistCountSink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
