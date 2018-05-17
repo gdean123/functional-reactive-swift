@@ -24,15 +24,15 @@
 		AEF497D720ACA7F5002316C1 /* PersistedCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497D620ACA7F5002316C1 /* PersistedCount.swift */; };
 		AEF497DC20ADF1AF002316C1 /* PersistCountSinkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497DB20ADF1AF002316C1 /* PersistCountSinkSpec.swift */; };
 		AEF497E020ADFB7B002316C1 /* PersistedCountSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF497DF20ADFB7B002316C1 /* PersistedCountSourceSpec.swift */; };
-		DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
-		DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
-		DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CB21816E906A6F3516E3 /* CounterViewController.swift */; };
+		DE99C2AFE7A1917EE74476A2 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C1E0CBF792800145ECCE /* CountViewController.swift */; };
+		DE99C402E7D0534EEEA53753 /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CD156701719F9DD4B4E5 /* CounterView.xib */; };
+		DE99C4F6EC9E476745483473 /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CEF8A743C9B2BD939150 /* CountView.xib */; };
 		DE99C586DEF24F7FCE60AB51 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C84911D384130DAE142A /* Navigator.swift */; };
+		DE99C78634490A534319CF7E /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CEF8A743C9B2BD939150 /* CountView.xib */; };
 		DE99C80A15A7B5B6E7DF4403 /* PersistCountSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C65AF0A58B61EB554099 /* PersistCountSink.swift */; };
+		DE99C84B9301260AB7D3D398 /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CD156701719F9DD4B4E5 /* CounterView.xib */; };
 		DE99C8F7D3870FE9760743E2 /* PersistedCountSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CF4CD25B79F76A2AFBBA /* PersistedCountSource.swift */; };
-		DE99CA3F492EB320B8A74593 /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C33E9C44E2F5E7D8516C /* CountView.xib */; };
-		DE99CF154C21DA45C7D7874D /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99CC380F20FF2B82A40B2D /* CountViewController.swift */; };
-		DE99CFA98D75C5C212E647CE /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99C3068B0D4A54CDE63628 /* CounterView.xib */; };
+		DE99CD6476C815874EB5FF98 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C3F85B13A188371EEA74 /* CounterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,12 +79,12 @@
 		AEF497DB20ADF1AF002316C1 /* PersistCountSinkSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistCountSinkSpec.swift; sourceTree = "<group>"; };
 		AEF497DF20ADFB7B002316C1 /* PersistedCountSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistedCountSourceSpec.swift; sourceTree = "<group>"; };
 		D41B5367B5A600BB2BB7861B /* Pods-CounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE99C3068B0D4A54CDE63628 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
-		DE99C33E9C44E2F5E7D8516C /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
+		DE99C1E0CBF792800145ECCE /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		DE99C3F85B13A188371EEA74 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		DE99C65AF0A58B61EB554099 /* PersistCountSink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistCountSink.swift; sourceTree = "<group>"; };
 		DE99C84911D384130DAE142A /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		DE99CB21816E906A6F3516E3 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
-		DE99CC380F20FF2B82A40B2D /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		DE99CD156701719F9DD4B4E5 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
+		DE99CEF8A743C9B2BD939150 /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
 		DE99CF4CD25B79F76A2AFBBA /* PersistedCountSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistedCountSource.swift; sourceTree = "<group>"; };
 		E3EAA482E5497CFA3371317D /* Pods_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD175E6925174079C3D16BBC /* Pods-CounterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CounterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CounterTests/Pods-CounterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,13 +235,29 @@
 		DE99C109441FAFB69F3C0CD7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DE99C3068B0D4A54CDE63628 /* CounterView.xib */,
-				DE99C33E9C44E2F5E7D8516C /* CountView.xib */,
-				DE99CC380F20FF2B82A40B2D /* CountViewController.swift */,
-				DE99CB21816E906A6F3516E3 /* CounterViewController.swift */,
 				DE99C84911D384130DAE142A /* Navigator.swift */,
+				DE99CF7F12F703F682814D9E /* Counter */,
+				DE99CF5C0DA63D687E7E7D74 /* Count */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DE99CF5C0DA63D687E7E7D74 /* Count */ = {
+			isa = PBXGroup;
+			children = (
+				DE99C1E0CBF792800145ECCE /* CountViewController.swift */,
+				DE99CEF8A743C9B2BD939150 /* CountView.xib */,
+			);
+			path = Count;
+			sourceTree = "<group>";
+		};
+		DE99CF7F12F703F682814D9E /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				DE99C3F85B13A188371EEA74 /* CounterViewController.swift */,
+				DE99CD156701719F9DD4B4E5 /* CounterView.xib */,
+			);
+			path = Counter;
 			sourceTree = "<group>";
 		};
 		FDF7E1D0433DE47CCB0B556E /* Pods */ = {
@@ -368,8 +384,8 @@
 			files = (
 				AE2D7DDD20AA40F500760134 /* LaunchScreen.storyboard in Resources */,
 				AE2D7DDA20AA40F500760134 /* Assets.xcassets in Resources */,
-				DE99CFA98D75C5C212E647CE /* CounterView.xib in Resources */,
-				DE99CA3F492EB320B8A74593 /* CountView.xib in Resources */,
+				DE99C402E7D0534EEEA53753 /* CounterView.xib in Resources */,
+				DE99C78634490A534319CF7E /* CountView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +393,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE99C2D0FFC435FEE2602A4A /* CounterView.xib in Resources */,
-				DE99C045AF4314FA5CFC9FEE /* CountView.xib in Resources */,
+				DE99C84B9301260AB7D3D398 /* CounterView.xib in Resources */,
+				DE99C4F6EC9E476745483473 /* CountView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,11 +520,11 @@
 				AEF497D020ABB735002316C1 /* main.swift in Sources */,
 				AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DD320AA40F300760134 /* AppDelegate.swift in Sources */,
-				DE99CF154C21DA45C7D7874D /* CountViewController.swift in Sources */,
-				DE99C3B7E6F60917088FEA0B /* CounterViewController.swift in Sources */,
 				DE99C586DEF24F7FCE60AB51 /* Navigator.swift in Sources */,
 				DE99C80A15A7B5B6E7DF4403 /* PersistCountSink.swift in Sources */,
 				DE99C8F7D3870FE9760743E2 /* PersistedCountSource.swift in Sources */,
+				DE99CD6476C815874EB5FF98 /* CounterViewController.swift in Sources */,
+				DE99C2AFE7A1917EE74476A2 /* CountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
