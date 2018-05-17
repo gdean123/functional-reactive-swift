@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class Navigator {
+class NavigationSink {
     let navigationController: UINavigationController
     let countViewController: CountViewController
     let didTapShowCountStream: Observable<Void>
@@ -12,11 +12,9 @@ class Navigator {
         self.countViewController = countViewController
         self.didTapShowCountStream = didTapShowCountStream
         self.disposeBag = disposeBag
-        
-        navigate()
     }
 
-    func navigate() {
+    func listen() {
         self.didTapShowCountStream
             .subscribe({ _ in
                 self.navigationController.pushViewController(self.countViewController, animated: true)

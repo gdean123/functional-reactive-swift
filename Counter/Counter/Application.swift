@@ -7,6 +7,7 @@ class Application {
     let navigationController: UINavigationController
     let disposeBag: DisposeBag
     let persistCountSink: PersistCountSink
+    let navigationSink: NavigationSink
 
     init() {
         disposeBag = DisposeBag()
@@ -30,7 +31,7 @@ class Application {
 
         navigationController = UINavigationController(rootViewController: counterViewController)
 
-        let _ = Navigator(
+        navigationSink = NavigationSink(
             navigationController: navigationController,
             countViewController: countViewController,
             didTapShowCountStream: didTapShowCountStream,
@@ -42,6 +43,7 @@ class Application {
 
     func run() {
         persistCountSink.listen()
+        navigationSink.listen()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = navigationController

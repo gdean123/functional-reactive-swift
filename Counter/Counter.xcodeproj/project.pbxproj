@@ -27,7 +27,7 @@
 		DE99C2AFE7A1917EE74476A2 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C1E0CBF792800145ECCE /* CountViewController.swift */; };
 		DE99C402E7D0534EEEA53753 /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CD156701719F9DD4B4E5 /* CounterView.xib */; };
 		DE99C4F6EC9E476745483473 /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CEF8A743C9B2BD939150 /* CountView.xib */; };
-		DE99C586DEF24F7FCE60AB51 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C84911D384130DAE142A /* Navigator.swift */; };
+		DE99C586DEF24F7FCE60AB51 /* NavigationSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C84911D384130DAE142A /* NavigationSink.swift */; };
 		DE99C78634490A534319CF7E /* CountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CEF8A743C9B2BD939150 /* CountView.xib */; };
 		DE99C80A15A7B5B6E7DF4403 /* PersistCountSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99C65AF0A58B61EB554099 /* PersistCountSink.swift */; };
 		DE99C84B9301260AB7D3D398 /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE99CD156701719F9DD4B4E5 /* CounterView.xib */; };
@@ -82,7 +82,7 @@
 		DE99C1E0CBF792800145ECCE /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
 		DE99C3F85B13A188371EEA74 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		DE99C65AF0A58B61EB554099 /* PersistCountSink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistCountSink.swift; sourceTree = "<group>"; };
-		DE99C84911D384130DAE142A /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		DE99C84911D384130DAE142A /* NavigationSink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSink.swift; sourceTree = "<group>"; };
 		DE99CD156701719F9DD4B4E5 /* CounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		DE99CEF8A743C9B2BD939150 /* CountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountView.xib; sourceTree = "<group>"; };
 		DE99CF4CD25B79F76A2AFBBA /* PersistedCountSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistedCountSource.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 		DE99C109441FAFB69F3C0CD7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DE99C84911D384130DAE142A /* Navigator.swift */,
+				DE99C84911D384130DAE142A /* NavigationSink.swift */,
 				DE99CF7F12F703F682814D9E /* Counter */,
 				DE99CF5C0DA63D687E7E7D74 /* Count */,
 			);
@@ -520,7 +520,7 @@
 				AEF497D020ABB735002316C1 /* main.swift in Sources */,
 				AEAD727920AB43FF005CD4E0 /* Application.swift in Sources */,
 				AE2D7DD320AA40F300760134 /* AppDelegate.swift in Sources */,
-				DE99C586DEF24F7FCE60AB51 /* Navigator.swift in Sources */,
+				DE99C586DEF24F7FCE60AB51 /* NavigationSink.swift in Sources */,
 				DE99C80A15A7B5B6E7DF4403 /* PersistCountSink.swift in Sources */,
 				DE99C8F7D3870FE9760743E2 /* PersistedCountSource.swift in Sources */,
 				DE99CD6476C815874EB5FF98 /* CounterViewController.swift in Sources */,
