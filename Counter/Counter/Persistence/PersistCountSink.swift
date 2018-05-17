@@ -3,12 +3,12 @@ import RxSwift
 import RealmSwift
 
 class PersistCountSink {
-    let countRepository: CountRepository
+    let realm: Realm
     let count: Observable<Int>
     let disposeBag: DisposeBag
 
-    init(countRepository: CountRepository, count: Observable<Int>, disposeBag: DisposeBag) {
-        self.countRepository = countRepository
+    init(realm: Realm, count: Observable<Int>, disposeBag: DisposeBag) {
+        self.realm = realm
         self.count = count
         self.disposeBag = disposeBag
     }
@@ -16,8 +16,14 @@ class PersistCountSink {
     func listen() {
         count
             .subscribe(onNext: { count in
-                self.countRepository.update(count: count)
+                self.update(count: count)
             })
             .disposed(by: disposeBag)
+    }
+
+    private func update(count: Int) {
+        try! realm.write {
+            realm.add(PersistedCount.create(currentCount: count), update: true)
+        }
     }
 }

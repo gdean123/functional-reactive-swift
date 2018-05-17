@@ -12,10 +12,10 @@ class Application {
         disposeBag = DisposeBag()
 
         let realm = try! Realm()
-        let countRepository = CountRepository(realm: realm)
+        let countSource = PersistedCountSource(realm: realm)
 
         let didTapShowCountStream = PublishSubject<Void>()
-        let counter = Counter(initialCountStream: countRepository.get().take(1))
+        let counter = Counter(initialCountStream: countSource.initial())
 
         let counterViewController = CounterViewController(
             counter: counter,
@@ -24,7 +24,7 @@ class Application {
         )
 
         let countViewController = CountViewController(
-            count: countRepository.get(),
+            count: countSource.all(),
             disposeBag: disposeBag
         )
 
@@ -37,7 +37,7 @@ class Application {
             disposeBag: disposeBag
         )
 
-        persistCountSink = PersistCountSink(countRepository: countRepository, count: counter.countStream(), disposeBag: disposeBag)
+        persistCountSink = PersistCountSink(realm: realm, count: counter.countStream(), disposeBag: disposeBag)
     }
 
     func run() {
